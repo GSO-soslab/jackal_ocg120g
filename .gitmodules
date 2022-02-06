@@ -1,0 +1,6 @@
+[submodule "devices/livox_ros_driver"]
+	path = devices/livox_ros_driver
+	url = https://github.com/Livox-SDK/livox_ros_driver.git
+[submodule "devices/zed-ros-wrapper"]
+	path = devices/zed-ros-wrapper
+	url = https://github.com/stereolabs/zed-ros-wrapper.git
