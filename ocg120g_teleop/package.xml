@@ -1,15 +1,18 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>jackal_ocg120g</name>
+  <name>ocg120g_teleop</name>
   <version>0.0.0</version>
-  <description>The jackal_ocg120g package</description>
+  <description>The ocg120g_teleop package</description>
 
   <maintainer email="emircem@uri.edu">Emir Cem Gezer</maintainer>
 
   <license>MIT</license>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <depend>jackal_desktop</depend>
+  <depend>joy_teleop</depend>
+  <depend>joy</depend>
 
-  <export></export>
+  <export>
+
+  </export>
 </package>
