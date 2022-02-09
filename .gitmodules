@@ -6,7 +6,7 @@
 	url = https://github.com/stereolabs/zed-ros-wrapper.git
 [submodule "jackal"]
 	path = jackal
-	url = git@github.com:GSO-soslab/jackal.git
+	url = https://github.com/GSO-soslab/jackal.git
 [submodule "jackal_robot"]
 	path = jackal_robot
-	url = git@github.com:GSO-soslab/jackal_robot.git
+	url = https://github.com/GSO-soslab/jackal_robot.git
