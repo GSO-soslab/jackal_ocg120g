@@ -6,7 +6,7 @@ import rosnode
 import rostopic
 import roslaunch
 import sys
-
+import time
 
 class TopicRelay:
     def __init__(self):
@@ -51,6 +51,9 @@ class TopicRelay:
             if self._node_from in rosnode.get_node_names():
                 break
             r.sleep()
+
+        # Wait a bit before doing anything, m'kay
+        time.sleep(30)
 
 
 def main():
