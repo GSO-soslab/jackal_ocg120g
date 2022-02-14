@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node type="node_relay.py" name="zed_node_relayer" pkg="ocg120g_bringup" output="screen">
+        <rosparam param="blacklist">[]</rosparam>
+        <rosparam param="node_from">/zed_node</rosparam>
+    </node>
+
+</launch>
