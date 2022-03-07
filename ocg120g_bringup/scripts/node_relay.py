@@ -13,6 +13,9 @@ class TopicRelay:
         if not rospy.has_param('~node_from'):
             sys.exit("No 'from' node is given")
 
+        self._prefix = ''
+        if rospy.has_param('~prefix'):
+            self._prefix = rospy.get_param('~prefix')
 
         self._node_from = rospy.get_param('~node_from')
 
@@ -41,7 +44,7 @@ class TopicRelay:
         self.launch.start()
         for topic in self.relay_topics:
             if topic not in self._blacklist:
-                node = roslaunch.core.Node('topic_tools', 'relay', args="{0} relay/{0}".format(topic))
+                node = roslaunch.core.Node('topic_tools', 'relay', args="{0} {1}{0}".format(topic, self._prefix))
                 self.launch.launch(node)
 
 
