@@ -1,9 +1,16 @@
 <?xml version="1.0"?>
 <launch>
 
-    <include file="$(find livox_ros_driver)/launch/livox_lidar.launch"/>
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
 
     <node pkg="tf2_ros" type="static_transform_publisher" name="livox_link_broadcaster"
-        args="0.1 -0.1 0.55 0 0 0 base_link livox_frame" />
+        args="0.1 0.0 0.45 0 0 0 chassis_link camera_link" />
+
+    <node type="depthimage_to_laserscan" pkg="depthimage_to_laserscan"
+        name="depthimage_to_laserscan_node">
+        <remap from="camera_info" to="camera/depth/camera_info"/>
+        <remap from="image" to="/camera/depth/image_rect_raw"/>
+        <remap from="scan" to="front/scan"/>
+    </node>
 
 </launch>
