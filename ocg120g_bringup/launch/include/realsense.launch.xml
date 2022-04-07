@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find livox_ros_driver)/launch/livox_lidar.launch"/>
+
+    <node pkg="tf2_ros" type="static_transform_publisher" name="livox_link_broadcaster"
+        args="0.1 -0.1 0.55 0 0 0 base_link livox_frame" />
+
+</launch>
