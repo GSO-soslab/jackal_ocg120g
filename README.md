@@ -61,9 +61,9 @@ roslaunch ocg120g_bringup relay_zed.launch
 
 #### Required repositories
 
-|Driver Name|Repository URL|Working Commit hash|
-|-----------|--------------|-------------------|
-|Livox Laser|https://github.com/Livox-SDK/livox_ros_driver.git|[880c46a](https://github.com/Livox-SDK/livox_ros_driver/commit/880c46a91aaa602dbecf20e204da4751747b3826)|
+|Driver Name|Repository URL|Working Commit hash|Additional information|
+|-----------|--------------|-------------------|----------------------|
+|Livox Laser|https://github.com/Livox-SDK/livox_ros_driver.git|[880c46a](https://github.com/Livox-SDK/livox_ros_driver/commit/880c46a91aaa602dbecf20e204da4751747b3826)|Requires additional configuration. Refer to [network setup](docs/setup_network.md) and [time sync setup](docs/time_sync.md).|
 |Zed Streo Camera|https://github.com/stereolabs/zed-ros-wrapper.git|[1299a1c](https://github.com/stereolabs/zed-ros-wrapper/commit/1299a1c9fd454194f9a36d57d4075af185d603fe)|
 |Velodyne|-|Refer [here](https://www.clearpathrobotics.com/assets/guides/melodic/jackal/description.html)|
 |Intel Realsense|-|Refer [here](http://wiki.ros.org/RealSense)|
