@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <launch>
 
+    <include file="$(find ocg120g_bringup)/launch/include/velodyne.launch.xml"/>
+
     <node type="pointcloud_to_laserscan_node" pkg="pointcloud_to_laserscan"
         name="pointcloud_to_laserscan">
         <remap from="cloud_in" to="velodyne_points"/>
