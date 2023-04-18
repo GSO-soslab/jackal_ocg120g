@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ocg120g_remote</name>
+  <version>0.0.0</version>
+  <description>The ocg120g_remote package</description>
+
+  <maintainer email="linzhao@uri.edu">Lin Zhao</maintainer>
+
+  <license>MIT</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
