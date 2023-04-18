@@ -4,7 +4,7 @@
     <!-- Launch realsense with origainl -->
     <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch"/> -->
 
-    <!-- Launch realsense with pointcloud -->
+    <!-- Launch realsense with pointcloud option-->
     <include file="$(find ocg120g_bringup)/launch/include/realsense_pc.launch.xml"/>
 
     <!-- Setup tf -->
