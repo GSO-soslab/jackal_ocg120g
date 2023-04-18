@@ -1,16 +1,29 @@
 <?xml version="1.0"?>
 <launch>
 
-    <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+    <!-- Launch realsense with origainl -->
+    <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch"/> -->
 
-    <node pkg="tf2_ros" type="static_transform_publisher" name="livox_link_broadcaster"
+    <!-- Launch realsense with pointcloud -->
+    <include file="$(find ocg120g_bringup)/launch/include/realsense_pc.launch.xml"/>
+
+    <!-- Setup tf -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="realsense_link_broadcaster"
         args="0.1 0.0 0.45 0 0 0 chassis_link camera_link" />
 
+    <!-- Convert depth image to laserscan  -->
     <node type="depthimage_to_laserscan" pkg="depthimage_to_laserscan"
         name="depthimage_to_laserscan_node">
         <remap from="camera_info" to="camera/depth/camera_info"/>
         <remap from="image" to="/camera/depth/image_rect_raw"/>
         <remap from="scan" to="front/scan"/>
+    </node>
+
+    <!-- Compress pointcloud for transportation -->
+    <node type="publish_realsense" pkg="point_cloud_transport_tutorial"
+        name="realsense_compress_node">
+        <!-- <remap from="/input_pointcloud" to="/camera/depth/color/points"/> -->
+        <!-- <remap from="/output_pointcloud" to="/pct/point_cloud"/> -->
     </node>
 
 </launch>
