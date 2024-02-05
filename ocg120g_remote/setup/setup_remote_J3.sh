@@ -4,11 +4,10 @@
 
 
 ### the host name of remote jackal name ###
-export ROS_MASTER_URI=http://cpr-j100-0608:11311
+export ROS_MASTER_URI=http://cpr-j100-0604:11311
 
 ### the IP of current laptop to control the remote jackal ###
 export ROS_IP=192.168.1.178
 
-### launch the viz 
-roslaunch ocg120g_remote  visualize_demo1_J2.launch
-
+### launch the viz
+roslaunch ocg120g_remote visualize_demo1_J3.launch 

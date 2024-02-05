@@ -4,11 +4,12 @@
 
 
 ### the host name of remote jackal name ###
-export ROS_MASTER_URI=http://cpr-j100-0608:11311
+export ROS_MASTER_URI=http://cpr-j100-0551:11311
 
 ### the IP of current laptop to control the remote jackal ###
 export ROS_IP=192.168.1.178
 
-### launch the viz 
-roslaunch ocg120g_remote  visualize_demo1_J2.launch
 
+### transmit dense pointcloud
+rosparam set /draco_listener/point_cloud_transport draco
+roslaunch point_cloud_transport_tutorial start.launch

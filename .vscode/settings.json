@@ -1,0 +1,14 @@
+{
+  "python.autoComplete.extraPaths": [
+    "/home/lin/develop/ros/ros_ws/devel/lib/python3/dist-packages",
+    "/home/lin/develop/ros/soslab_ws/devel/lib/python3/dist-packages",
+    "/opt/ros/noetic/lib/python3/dist-packages",
+    "/home/lin/.local/bin"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/lin/develop/ros/ros_ws/devel/lib/python3/dist-packages",
+    "/home/lin/develop/ros/soslab_ws/devel/lib/python3/dist-packages",
+    "/opt/ros/noetic/lib/python3/dist-packages",
+    "/home/lin/.local/bin"
+  ]
+}
