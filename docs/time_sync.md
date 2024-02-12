@@ -13,5 +13,5 @@ Edit configuration for it. `/etc/default/ptpd`
 START_DAEMON=no
 
 # Add command line options for ptpd
-PTPD_OPTS="-i br0 -M"
+PTPD_OPTS="-M -i br0 -C"
 ```
