@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find ocg120g_bringup)/launch/include/realsense.launch.xml"/>
+
+    <include file="$(find ocg120g_bringup)/launch/include/livox.launch.xml"/>
+
+</launch>
