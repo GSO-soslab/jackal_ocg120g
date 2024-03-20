@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- RVIZ config -->
+  <node pkg="rviz" name="rviz_j2" type="rviz" required="true" 
+        args="-d $(find ocg120g_remote)/rviz/demo2_J1.rviz"/>
+
+</launch>
