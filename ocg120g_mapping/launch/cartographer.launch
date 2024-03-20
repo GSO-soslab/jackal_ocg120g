@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
 <launch>
 
+    <arg name="scan_topic" default="/front/scan/realsense" /> 
+    <!-- <arg name="scan_topic" default="/front/scan/livox" />  -->
+
     <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory
               $(find ocg120g_mapping)/config
           -configuration_basename jackal_2d.lua"
       output="screen">
-        <!--remap from="points2" to="velodyne_points"/-->
-        <remap from="scan" to="front/scan"/>
+        <remap from="scan" to="$(arg scan_topic)"/>
         <remap from="odom" to="odometry/filtered" />
     </node>
 
