@@ -34,8 +34,11 @@
   - bringup Realsense and Livox: `roslaunch ocg120g_bringup bringup_sensors.launch`
   - enbale time sync for Livox: `sudo ptpd -M -i br0 -C`
   - statrt cartographer: `roslaunch ocg120g_mapping cartographer.launch` 
+  - save map: `rosrun map_server map_saver -f place_date`
 - Remote side:
-  - ?
+  - `roscd ocg120g_remote`
+  - `cd setup/J1_laptop`
+  - `sh setup_Demo2_J1.sh`
 
 ### Jackal 2 (Velodyne Lidar)
 - Jackal side: 
