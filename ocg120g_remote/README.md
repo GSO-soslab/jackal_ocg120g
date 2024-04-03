@@ -33,7 +33,9 @@
   - ssh Jackal: `ssh administrator@192.168.1.100`
   - bringup Realsense and Livox: `roslaunch ocg120g_bringup bringup_sensors.launch`
   - enbale time sync for Livox: `sudo ptpd -M -i br0 -C`
-  - statrt cartographer: `roslaunch ocg120g_mapping cartographer.launch` 
+  - statrt cartographer based on sensor: 
+    - livox: `roslaunch ocg120g_mapping cartographer_2d_livox.launch` 
+    - realsense: `roslaunch ocg120g_mapping cartographer_2d_realsense.launch` 
   - save map: `rosrun map_server map_saver -f place_date`
 - Remote side:
   - `roscd ocg120g_remote`
@@ -46,8 +48,13 @@
   - unplug and plug Lidar
   - reboot system: `sudo reboot`
   - check Lidar Hz: `rostopic hz /velodyne_points`
-  - statrt cartographer: `roslaunch ocg120g_mapping cartographer.launch` 
+  - statrt cartographer: `roslaunch ocg120g_mapping cartographer_2d_velodyne.launch` 
 - Remote side:
   - `roscd ocg120g_remote`
   - `cd setup/J2_laptop`
   - `sh setup_Demo2_J2.sh`  
+
+
+## Fix Issues:
+
+- network access issue: `echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null`

@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-    <!-- <arg name="scan_topic" default="/front/scan/realsense" />  -->
-    <arg name="scan_topic" default="/front/scan/livox" /> 
+    <arg name="scan_topic" default="/front/scan" /> 
 
     <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
