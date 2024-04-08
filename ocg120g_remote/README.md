@@ -54,6 +54,20 @@
   - `cd setup/J2_laptop`
   - `sh setup_Demo2_J2.sh`  
 
+---
+
+## Demo 3
+
+### Jackal 1 (Realsense + Livox)
+- Jackal side: 
+  - ssh Jackal: `ssh administrator@192.168.1.100`
+  - bringup Realsense and Livox: `roslaunch ocg120g_bringup bringup_sensors.launch`
+  - enbale time sync for Livox: `sudo ptpd -M -i br0 -C`
+  - statrt navigation based on sensor: 
+    - realsense: `roslaunch ocg120g_navigation navigation_horn_realsense.launch` 
+    - livox: `roslaunch ocg120g_navigation navigation_horn_livox.launch` 
+- Remote side:
+
 
 ## Fix Issues:
 

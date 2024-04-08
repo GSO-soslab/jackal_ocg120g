@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="map_file" default="$(find ocg120g_navigation)/maps/map_horn_04_13_2023.yaml"/>
+  <arg name="use_map_topic" default="false"/>
+  <arg name="scan_topic" default="front/scan/realsense"/>
+
+  <!-- Map Server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- AMCL -->
+  <include file="$(find jackal_navigation)/launch/include/amcl.launch" >
+    <arg name="use_map_topic" value="$(arg use_map_topic)" />
+    <arg name="scan_topic"    value="$(arg scan_topic)" />
+  </include>
+
+  <!--- Move Base -->
+  <include file="$(find jackal_navigation)/launch/include/move_base.launch" />
+
+</launch>
