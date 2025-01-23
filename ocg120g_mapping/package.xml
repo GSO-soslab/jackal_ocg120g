@@ -13,7 +13,7 @@
   <depend>cartographer</depend>
   <depend>cartographer_ros</depend>
   <depend>pointcloud_to_laserscan</depend>
-  <depend>jackal_cartographer_navigation</depend>
+<!--   <depend>jackal_cartographer_navigation</depend> -->
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->
