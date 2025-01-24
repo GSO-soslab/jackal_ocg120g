@@ -7,9 +7,12 @@
 export ROS_MASTER_URI=http://cpr-j100-0551:11311
 
 ### the IP of current laptop to control the remote jackal ###
-export ROS_IP=192.168.1.178
+export ROS_IP=192.168.1.165
+
+### source the remote ros workspace
+source /home/soslab/jackal_ws/devel/setup.bash
 
 
 ### transmit dense pointcloud
-rosparam set /draco_listener/point_cloud_transport draco
-roslaunch point_cloud_transport_tutorial start.launch
+# rosparam set /draco_listener/point_cloud_transport draco
+# roslaunch point_cloud_transport_tutorial start.launch
