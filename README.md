@@ -3,7 +3,7 @@
 This repository contains configurations and source codes for demos presented in course OCG120G at University of Rhode Island.
 
 
-## Configure for Jackal with Velodyne Lidar
+## Configure for Jackal J3 with Velodyne Lidar
 
 ### Basic Jackal System setup
 - download the [clearpath noetic OS](https://packages.clearpathrobotics.com/stable/images/latest/noetic-focal/)
@@ -19,7 +19,7 @@ This repository contains configurations and source codes for demos presented in 
 - `git clone https://github.com/GSO-soslab/jackal_ocg120g`
 - install other dependencies: 
 ```
-cd ~/ros_ws
+cd ~/Develop/ros/jackal_ws/
 rosdep install --from-paths src --ignore-src -y
 ```
 - `catkin build`
@@ -28,6 +28,7 @@ rosdep install --from-paths src --ignore-src -y
 - [install ros noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
 - go to ROS workspace: `cd ~/Your_path/jackal_ws`
 - install jackal_ocg120g: `git clone https://github.com/GSO-soslab/jackal_ocg120g`
+- install other dependencies: `sudo apt-get install ros-noetic-jackal-description`
 - build: `catkin build ocg120g_remote`
 
 ### setup network
@@ -40,8 +41,8 @@ rosdep install --from-paths src --ignore-src -y
 - In Jackal, launch Velodyne Lidar: `roslaunch ocg120g_bringup bringup_velodyne.launch`
 - In laptop:
 ```sh
-cd ~/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J1_laptop
-source setup_J1.sh
+cd ~/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J3_laptop
+source setup_J3_Demo1.sh
 ```
 
 

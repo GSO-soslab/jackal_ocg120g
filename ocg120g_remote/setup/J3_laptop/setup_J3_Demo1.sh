@@ -8,11 +8,11 @@
 ### the host name of remote jackal name ###
 export ROS_MASTER_URI=http://cpr-j100-0608:11311
 
-### Feild laptop (soslab-Latitude-5430-Rugged) to control the remote jackal ###
+### Field laptop (soslab-Latitude-5430-Rugged) to control the remote jackal ###
 export ROS_IP=192.168.1.173
 
 ### source the remote laptop ros workspace
-source /home/lin/develop/ros/jackal_ws/devel/setup.bash
+source /home/soslab/Develop/ros/jackal_ws/devel/setup.bash
 
 ### launch the viz
 roslaunch ocg120g_remote visualize_demo1_J3.launch 
