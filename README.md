@@ -2,6 +2,68 @@
 
 This repository contains configurations and source codes for demos presented in course OCG120G at University of Rhode Island.
 
+
+## Configure for Jackal with Velodyne Lidar
+
+### Basic Jackal System setup
+- download the [clearpath noetic OS](https://packages.clearpathrobotics.com/stable/images/latest/noetic-focal/)
+- check the [online jackal manual](https://docs.clearpathrobotics.com/docs/ros1noetic/robots/outdoor_robots/jackal/user_manual_jackal/) for vehicle information
+- check the [online system configure](https://docs.clearpathrobotics.com/docs_indoornav_user_manual/base_robot_config/config_install_robot_os) to install all the basic ROS packages.
+
+### Velodyne Lidar ROS driver installation
+- IP set to 192.168.131.93 through the website configuration
+- install driver: `192.168.131.93`
+
+### ocg120g setup
+- go to ROS workspace
+- `git clone https://github.com/GSO-soslab/jackal_ocg120g`
+- install other dependencies: 
+```
+cd ~/ros_ws
+rosdep install --from-paths src --ignore-src -y
+```
+- `catkin build`
+
+### remote setup
+- [install ros noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
+- go to ROS workspace: `cd ~/Your_path/jackal_ws`
+- install jackal_ocg120g: `git clone https://github.com/GSO-soslab/jackal_ocg120g`
+- build: `catkin build ocg120g_remote`
+
+### setup network
+- Add laptop hostname in Jackal:
+    - In laptop terminal: get [Laptop_IP] by typing `hostname -I`; and get [Laptop_Hostname] by typing `hostname`
+    - In jackal terminal: `echo '[Laptop_IP] [Laptop_Hostname]' | sudo tee -a /etc/hosts`
+- Do the same thing for Jackal hostanme in laptop
+
+### Demo1 for Velodyne lidar
+- In Jackal, launch Velodyne Lidar: `roslaunch ocg120g_bringup bringup_velodyne.launch`
+- In laptop:
+```sh
+cd ~/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J1_laptop
+source setup_J1.sh
+```
+
+
+------------------------
+
+## Configure for Jackal with RealSense
+
+### Basic Jackal System setup
+- download the [clearpath noetic OS](https://packages.clearpathrobotics.com/stable/images/latest/noetic-focal/)
+- check the [online jackal manual](https://docs.clearpathrobotics.com/docs/ros1noetic/robots/outdoor_robots/jackal/user_manual_jackal/) for vehicle information
+- check the [online system configure](https://docs.clearpathrobotics.com/docs_indoornav_user_manual/base_robot_config/config_install_robot_os) to install all the basic ROS packages.
+
+------------------------
+
+## Configure for Jackal with Livox Lidar
+
+### Basic Jackal System setup
+- download the [clearpath noetic OS](https://packages.clearpathrobotics.com/stable/images/latest/noetic-focal/)
+- check the [online jackal manual](https://docs.clearpathrobotics.com/docs/ros1noetic/robots/outdoor_robots/jackal/user_manual_jackal/) for vehicle information
+- check the [online system configure](https://docs.clearpathrobotics.com/docs_indoornav_user_manual/base_robot_config/config_install_robot_os) to install all the basic ROS packages.
+
+
 ## Setting Jackal up
 
 First, refer to the [Jackal documentation](https://www.clearpathrobotics.com/assets/guides/kinetic/jackal/index.html) to complete the Jackal setup.
