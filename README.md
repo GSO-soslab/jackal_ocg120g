@@ -8,7 +8,7 @@ This repository contains configurations and source codes for demos presented in 
 ### Basic Jackal System setup
 - download the [clearpath noetic OS](https://packages.clearpathrobotics.com/stable/images/latest/noetic-focal/)
 - check the [online jackal manual](https://docs.clearpathrobotics.com/docs/ros1noetic/robots/outdoor_robots/jackal/user_manual_jackal/) for vehicle information
-- check the [online system configure](https://docs.clearpathrobotics.com/docs_indoornav_user_manual/base_robot_config/config_install_robot_os) to install all the basic ROS packages.
+- check the [online system configure](https://docs.clearpathrobotics.com/docs/ros1noetic/robots/outdoor_robots/jackal/tutorials_jackal/) to install all the basic ROS packages.
 
 ### Velodyne Lidar ROS driver installation
 - IP set to 192.168.131.93 through the website configuration
@@ -53,7 +53,7 @@ source setup_J3_Demo1.sh
 ### Basic Jackal System setup
 - download the [clearpath noetic OS](https://packages.clearpathrobotics.com/stable/images/latest/noetic-focal/)
 - check the [online jackal manual](https://docs.clearpathrobotics.com/docs/ros1noetic/robots/outdoor_robots/jackal/user_manual_jackal/) for vehicle information
-- check the [online system configure](https://docs.clearpathrobotics.com/docs_indoornav_user_manual/base_robot_config/config_install_robot_os) to install all the basic ROS packages.
+- check the [online system configure](https://docs.clearpathrobotics.com/docs/ros1noetic/robots/outdoor_robots/jackal/tutorials_jackal/) to install all the basic ROS packages.
 
 ### RealSense ROS driver installation
 - install librealsense SDK
