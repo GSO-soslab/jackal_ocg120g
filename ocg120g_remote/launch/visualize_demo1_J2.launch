@@ -5,4 +5,11 @@
   <node pkg="rviz" name="rviz_j2" type="rviz" required="true" 
         args="-d $(find ocg120g_remote)/rviz/demo1_J2.rviz"/>
 
+  <!-- bluetooth joy -->
+  <node pkg="joy" type="joy_node" name="joy_node" ns = "bluetooth_teleop">
+        <param name = "deadzone" value = "0.1"/>
+        <param name = "autorepeat_rate" value = "20"/>
+        <param name = "dev" value = "/dev/input/js0"/>
+  </node>
+
 </launch>

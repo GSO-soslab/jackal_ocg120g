@@ -11,6 +11,6 @@ export ROS_IP=192.168.1.169
 ### source remote workspace
 source /home/soslab/Develop/ros/jackal_ws/devel/setup.bash
 
-### launch the viz 
+### launch the viz  
 roslaunch ocg120g_remote visualize_demo1_J2.launch
 
