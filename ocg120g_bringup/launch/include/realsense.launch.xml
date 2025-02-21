@@ -20,10 +20,8 @@
     </node>
 
     <!-- Compress pointcloud for transportation -->
-    <!-- <node type="publish_realsense" pkg="point_cloud_transport_tutorial"
-        name="realsense_compress_node">
-        <remap from="/input_pointcloud" to="/camera/depth/color/points"/>
-        <remap from="/output_pointcloud" to="/pct/point_cloud"/>
-    </node> -->
+    <node name="pc_compress" pkg="point_cloud_transport" type="republish" 
+          args="raw   in:=/camera/depth/color/points 
+                draco out:=/camera/depth/color/points" />
 
 </launch>
