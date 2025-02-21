@@ -101,6 +101,8 @@ catkin_make install
 ```sh
 cd ~/Your_Workspace/
 rosdep install --from-paths src --ignore-src -y
+# point cloud compression setup
+sudo apt install ros-noetic-point-cloud-transport ros-noetic-draco-point-cloud-transport
 ```
 - `catkin_make`
 
