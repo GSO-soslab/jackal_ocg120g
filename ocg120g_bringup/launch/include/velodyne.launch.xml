@@ -5,6 +5,7 @@
 
     <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
         <arg name="device_ip" value="$(arg ip)" />
+        <arg name="max_range" value="20" />
     </include>
 
     <node pkg="tf2_ros" type="static_transform_publisher" name="velodyne_vlp16_broadcaster"
@@ -14,6 +15,11 @@
         name="pointcloud_to_laserscan">
         <remap from="cloud_in" to="velodyne_points"/>
         <remap from="scan" to="front/scan"/>
-    </node>    
+    </node>   
+
+    <!-- Compress pointcloud for transportation -->
+    <node name="pc_compress" pkg="point_cloud_transport" type="republish" 
+          args="raw   in:=/velodyne_points
+                draco out:=/velodyne_points" />     
 
 </launch>
