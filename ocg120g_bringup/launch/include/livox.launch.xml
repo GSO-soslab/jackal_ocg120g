@@ -13,4 +13,9 @@
         <param name="min_height" value="0.2"/>
         <param name="max_height" value="0.6"/>
     </node>
+
+        <!-- Compress pointcloud for transportation -->
+    <node name="pc_compress" pkg="point_cloud_transport" type="republish" 
+          args="raw   in:=/livox/lidar 
+                draco out:=/livox/lidar" />
 </launch>
