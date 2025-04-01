@@ -43,3 +43,20 @@ rosdep install --from-paths src --ignore-src -y
 cd ~/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J3_laptop
 source setup_J3_Demo1.sh
 ```
+
+### Demo2 for Velodyne lidar
+
+In Jackal:
+- launch Velodyne Lidar: `roslaunch ocg120g_bringup bringup_velodyne.launch`
+- start maping: `roslaunch ocg120g_mapping cartographer_2d_velodyne.launch`
+
+In remote:
+- start visualization: `./setup_J1_velodyne_demo2.sh `
+
+### Demo3 for Velodyne lidar
+In Jackal:
+- launch Velodyne Lidar: `roslaunch ocg120g_bringup bringup_velodyne.launch`
+- start navigation: `roslaunch ocg120g_navigation navigation_horn_velodyne.launch` 
+
+In remote:
+- start visualization: `./setup_J1_velodyne_demo3.sh `
