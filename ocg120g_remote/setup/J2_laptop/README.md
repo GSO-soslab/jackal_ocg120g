@@ -55,9 +55,10 @@ catkin_make install
 cd ~/Your_Workspace/
 rosdep install --from-paths src --ignore-src -y
 # point cloud compression setup
-sudo apt install ros-noetic-point-cloud-transport ros-noetic-draco-point-cloud-transport
+sudo apt install ros-noetic-point-cloud-transport ros-noetic-draco-point-cloud-transport ros-noetic-jackal-navigation
 ```
-- `catkin_make`
+- `catkin build`
+- build [cartographer](../../README.md) from sources
 
 ### remote setup
 - [install ros noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
@@ -65,6 +66,7 @@ sudo apt install ros-noetic-point-cloud-transport ros-noetic-draco-point-cloud-t
 - install jackal_ocg120g: `git clone https://github.com/GSO-soslab/jackal_ocg120g`
 - install other dependencies: `sudo apt-get install ros-noetic-jackal-description`
 - build: `catkin build ocg120g_remote`
+- build [cartographer](../../README.md) from sources
 
 ### setup network
 - Add laptop hostname in Jackal:
@@ -73,9 +75,37 @@ sudo apt install ros-noetic-point-cloud-transport ros-noetic-draco-point-cloud-t
 - Do the same thing for Jackal hostanme in laptop
 
 ### Demo1 for Realsense camera
-- In Jackal, launch Realsense camera: `roslaunch ocg120g_bringup bringup_realsense.launch`
-- In laptop:
+In Jackal:
+- launch Realsense camera: `roslaunch ocg120g_bringup bringup_realsense.launch`
+
+In laptop:
 ```sh
 cd ~/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J2_laptop
 source setup_J2_Demo1.sh
 ```
+
+### Demo2 for Realsense camera
+In Jackal:
+- launch Realsense camera: `roslaunch ocg120g_bringup bringup_realsense.launch`
+- launch mapping: `roslaunch ocg120g_mapping cartographer_2d_realsense.launch`
+- save map: `rosrun map_server map_saver -f place_date`
+
+In laptop:
+```sh
+cd ~/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J2_laptop
+source setup_J2_Demo2.sh
+```
+
+### Demo3 for Realsense camera
+In Jackal:
+- launch Realsense camera: `roslaunch ocg120g_bringup bringup_realsense.launch`
+- launch navigation: `roslaunch ocg120g_navigation navigation_horn_realsense.launch`
+
+In laptop:
+- start the visulaization
+```sh
+cd ~/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J2_laptop
+source setup_J2_Demo3.sh
+```
+- init the pose: use **2D Pose Estimation (green arrow)** to align the init pose.
+- give goal: use **2D Nav Goal (red arrow)** to send a goal to ask Jackal to follow.
