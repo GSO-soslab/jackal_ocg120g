@@ -14,7 +14,6 @@
 
   <!-- Deccompress pointcloud for transportation -->
   <node name="pc_decompress" pkg="point_cloud_transport" type="republish" 
-        args="draco  in:=/livox/lidar 
-              raw   out:=/livox/lidar/decompressed" />
-
+        args="draco  in:=/velodyne_points
+              raw   out:=/velodyne_points/decompressed" />
 </launch>

@@ -7,6 +7,7 @@ Panels:
         - /Global Options1
         - /Status1
         - /Local Planner1
+        - /PointCloud21
       Splitter Ratio: 0.5
     Tree Height: 719
   - Class: rviz/Selection
@@ -246,7 +247,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /velodyne_points
+      Topic: /velodyne_points/decompressed
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
