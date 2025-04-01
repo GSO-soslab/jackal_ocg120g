@@ -28,8 +28,8 @@ sudo apt-get install -y \
     libsuitesparse-dev \
     lsb-release \
     ninja-build \
-    python3-sphinx \
     stow
+python3 -m pip install Sphinx
 
 # Install Protocol Buffers and Abseil if available.
 # No need to build it ourselves.

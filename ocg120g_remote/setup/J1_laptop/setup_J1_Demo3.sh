@@ -7,7 +7,10 @@
 export ROS_MASTER_URI=http://cpr-j100-0551:11311
 
 ### the IP of current laptop to control the remote jackal ###
-export ROS_IP=192.168.1.178
+export ROS_IP=192.168.1.165
+
+### source the remote laptop ros workspace
+source /home/soslab-latitude5420/Develop/ros/jackal_ws/devel/setup.bash
 
 ### launch the viz 
-roslaunch ocg120g_remote visualize_demo2_J1.launch
+roslaunch ocg120g_remote visualize_demo3_J1.launch

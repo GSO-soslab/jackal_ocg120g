@@ -22,6 +22,7 @@ cd ~/Your_Workspace/src
 git clone https://github.com/GSO-soslab/jackal_ocg120g
 cd ~/Your_Workspace/
 rosdep install --from-paths src --ignore-src -y
+- build [cartographer](../../README.md) from sources
 catkin build
 ```
 
@@ -30,6 +31,7 @@ catkin build
 - go to ROS workspace: `cd ~/Your_path/jackal_ws`
 - install jackal_ocg120g: `git clone https://github.com/GSO-soslab/jackal_ocg120g`
 - install other dependencies: `sudo apt-get install ros-noetic-jackal-description ros-noetic-joy ros-noetic-point-cloud-transport ros-noetic-point-cloud-transport-plugins`
+- build [cartographer](../../README.md) from sources
 - build: `catkin build ocg120g_remote`
 - source the env: `source ~/.bashrc`
 
@@ -52,4 +54,41 @@ sudo ptpd -M -i br0 -C
 ```sh
 cd ~/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J1_laptop
 source setup_J1_Demo1.sh
+```
+
+### Demo2 for Livox lidar
+In Jackal:
+- launch:
+```sh
+# launch lidar
+roslaunch ocg120g_bringup bringup_livox.launch
+# time sync
+sudo ptpd -M -i br0 -C
+```
+- start mapping: `roslaunch ocg120g_mapping cartographer_2d_livox.launch`
+- save map: `rosrun map_server map_saver -f place_date`
+
+In laptop:
+- launch visualization:
+```sh
+cd ~/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J1_laptop
+source setup_J1_Demo2.sh
+```
+
+### Demo2 for Livox lidar
+In Jackal:
+- launch:
+```sh
+# launch lidar
+roslaunch ocg120g_bringup bringup_livox.launch
+# time sync
+sudo ptpd -M -i br0 -C
+```
+- start navigation: `roslaunch ocg120g_navigation navigation_horn_livox.launch`
+
+In laptop:
+- launch visualization:
+```sh
+cd ~/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J1_laptop
+source setup_J1_Demo3.sh
 ```
