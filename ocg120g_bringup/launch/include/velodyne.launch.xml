@@ -20,6 +20,8 @@
         name="pointcloud_to_laserscan">
         <remap from="cloud_in" to="velodyne_points"/>
         <remap from="scan" to="front/scan"/>
+        <param name="min_height" value="0.0"/>
+        <param name="max_height" value="0.5"/>        
     </node>   
 
     <!-- Compress pointcloud for transportation -->
