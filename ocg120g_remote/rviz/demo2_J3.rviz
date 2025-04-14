@@ -6,7 +6,6 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /PointCloud21
       Splitter Ratio: 0.5
     Tree Height: 727
   - Class: rviz/Selection
@@ -99,7 +98,7 @@ Visualization Manager:
       Queue Size: 100
       Value: true
     - Class: Submaps
-      Enabled: true
+      Enabled: false
       Fade-out distance: 1
       High Resolution: true
       Low Resolution: false
@@ -109,14 +108,10 @@ Visualization Manager:
       Submaps:
         All: true
         All Submap Pose Markers: true
-        Trajectory 0:
-          0.7: true
-          Submap Pose Markers: true
-          Value: true
       Topic: /submap_list
       Tracking frame: base_link
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Class: rviz/Axes
       Enabled: true
@@ -147,7 +142,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: Intensity
       Decay Time: 0
-      Enabled: true
+      Enabled: false
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
@@ -162,7 +157,7 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48

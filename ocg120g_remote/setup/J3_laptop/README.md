@@ -56,7 +56,8 @@ In remote:
 ### Demo3 for Velodyne lidar
 In Jackal:
 - launch Velodyne Lidar: `roslaunch ocg120g_bringup bringup_velodyne.launch`
-- start navigation: `roslaunch ocg120g_navigation navigation_horn_velodyne.launch` 
+- start navigation: `roslaunch ocg120g_navigation navigation_whitehall_velodyne.launch` 
 
 In remote:
+- go to: `cd /home/soslab/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J3_laptop`
 - start visualization: `./setup_J1_velodyne_demo3.sh `

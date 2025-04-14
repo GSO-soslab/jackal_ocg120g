@@ -6,8 +6,6 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /Local Planner1
-        - /PointCloud21
       Splitter Ratio: 0.5
     Tree Height: 719
   - Class: rviz/Selection
@@ -252,6 +250,91 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
+    - Alpha: 0.800000011920929
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        chassis_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_fender_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_left_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_mount:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        front_right_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mid_mount:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        navsat_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rear_fender_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rear_left_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rear_mount:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        rear_right_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/Axes
+      Enabled: true
+      Length: 0.5
+      Name: Axes
+      Radius: 0.05000000074505806
+      Reference Frame: base_link
+      Show Trail: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -280,7 +363,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 18.637746810913086
+      Distance: 5.399726867675781
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -288,9 +371,9 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 2.1202163696289062
-        Y: -7.131920337677002
-        Z: 6.386450290679932
+        X: 3.2470781803131104
+        Y: -3.462109088897705
+        Z: 6.22035551071167
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
