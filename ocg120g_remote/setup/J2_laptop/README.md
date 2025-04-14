@@ -99,7 +99,7 @@ source setup_J2_Demo2.sh
 ### Demo3 for Realsense camera
 In Jackal:
 - launch Realsense camera: `roslaunch ocg120g_bringup bringup_realsense.launch`
-- launch navigation: `roslaunch ocg120g_navigation navigation_horn_realsense.launch`
+- launch navigation: `roslaunch ocg120g_navigation navigation_whitehall_realsense.launch`
 
 In laptop:
 - start the visulaization
