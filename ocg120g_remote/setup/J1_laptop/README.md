@@ -75,7 +75,7 @@ cd ~/Develop/ros/jackal_ws/src/jackal_ocg120g/ocg120g_remote/setup/J1_laptop
 source setup_J1_Demo2.sh
 ```
 
-### Demo2 for Livox lidar
+### Demo3 for Livox lidar
 In Jackal:
 - launch:
 ```sh
@@ -84,7 +84,7 @@ roslaunch ocg120g_bringup bringup_livox.launch
 # time sync
 sudo ptpd -M -i br0 -C
 ```
-- start navigation: `roslaunch ocg120g_navigation navigation_horn_livox.launch`
+- start navigation: `roslaunch ocg120g_navigation navigation_whitehall_livox.launch`
 
 In laptop:
 - launch visualization:
