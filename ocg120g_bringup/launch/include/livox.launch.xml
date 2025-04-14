@@ -10,8 +10,8 @@
         name="pointcloud_to_laserscan">
         <remap from="cloud_in" to="livox/lidar"/>
         <remap from="scan" to="front/scan/livox"/>
-        <param name="min_height" value="0.2"/>
-        <param name="max_height" value="0.6"/>
+        <param name="min_height" value="0.0"/>
+        <param name="max_height" value="1.0"/>
     </node>
 
         <!-- Compress pointcloud for transportation -->
